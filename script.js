@@ -10,9 +10,7 @@ function computerPlay(){
     }
 }
 
-// playRound function will play a game of rock, paper, scissors
-//  and returns the result
-
+// playRound function will play a game of rock, paper, scissors and returns the result
 function playRound(playerSelection, computerSelection){
     let getPlayerInsensitive = playerSelection.toLowerCase();
     if(getPlayerInsensitive === "rock" && computerSelection === "Rock"){
@@ -36,6 +34,21 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = "sciSSors";
-const computerSelection = computerPlay();
-console.log(playRound(playerSelection, computerSelection));
+// const playerSelection = "sciSSors";
+// const computerSelection = computerPlay();
+// console.log(game(playerSelection, computerSelection));
+
+// game function returns the winner after five rounds
+function game(){
+    for(let i = 0; i < 5; i++){
+        if(i < 5){
+            let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
+            let getWinOrLose = alert(playRound(getSelect, computerPlay()));
+                if( i >= 5 ){
+                    alert("You played 5 games already");
+                }
+        }
+    }
+}
+
+console.log(game());
