@@ -31,24 +31,43 @@ function playRound(playerSelection, computerSelection){
         return "It's a tie! Both are Scissors";
     } else if(getPlayerInsensitive === "scissors" && computerSelection === "Paper"){
         return "You win! Scissors beat Paper";
+    } else{
+        return "Check your spelling!";
     }
 }
-
-// const playerSelection = "sciSSors";
-// const computerSelection = computerPlay();
-// console.log(game(playerSelection, computerSelection));
 
 // game function returns the winner after five rounds
 function game(){
     for(let i = 0; i < 5; i++){
-        if(i < 5){
+
             let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
+            if(getSelect === null || getSelect === ""){
+                alert("You clicked Cancel!");
+            }
             let getWinOrLose = alert(playRound(getSelect, computerPlay()));
-                if( i >= 5 ){
-                    alert("You played 5 games already");
+            let winCounter = 0;
+                if( i === 4 ){
+                     alert("You've played 5 games");
                 }
-        }
+
     }
 }
 
 console.log(game());
+
+// if( i === 4 ){
+//     if (getWinOrLose.includes("You win") === true){
+//         winCounter = winCounter+ 1;
+//        continue;
+//    } else if(getWinOrLose.includes("You lose") === true){
+//        winCounter = winCounter - 1;
+//        continue;
+//    } else if(getWinOrLose.includes("tie") === true){
+//        continue;
+//    }
+//    if(winCounter >= 1){
+//        alert(`You've won ${winCounter} out of 5 games. You win!`);
+//    } else if(winCounter < 1){
+//        alert(`You've lost ${winCounter} out of 5 games. You lost!`);
+//    }
+// }
