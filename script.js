@@ -10,12 +10,8 @@ function computerPlay(){
     }
 }
 
-// Write a function that plays a single round of Rock Paper Scissors.
-// The function should take two parameters - the playerSelection
-// and computerSelection - and then return a string that declares the
-// winner of the round like so: "You Lose! Paper beats Rock"
-// Make your function’s playerSelection parameter
-// case-insensitive (so users can input rock, ROCK, RocK or any other variation).
+// playRound function will play a game of rock, paper, scissors
+//  and returns the result
 
 function playRound(playerSelection, computerSelection){
     let getPlayerInsensitive = playerSelection.toLowerCase();
@@ -40,6 +36,6 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
- const playerSelection = "sciSSors";
- const computerSelection = computerPlay();
+const playerSelection = "sciSSors";
+const computerSelection = computerPlay();
 console.log(playRound(playerSelection, computerSelection));
