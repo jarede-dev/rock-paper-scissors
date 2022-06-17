@@ -48,23 +48,24 @@ function game(){
             let winCounter = 0;
                 if( i === 4 ){
                      alert("You've played 5 games");
+                      return getResult;
                 }
-                if( i === 4 ){
+                const getResult = () => {if( i === 4 ){
                     if (getWinOrLose.includes("You win")){
                         winCounter = winCounter+ 1;
-                       continue;
+
                    } else if(getWinOrLose.includes("You lose")){
                        winCounter = winCounter - 1;
-                       continue;
+
                    } else if(getWinOrLose.includes("tie")){
-                       continue;
+
                    }
                    if(winCounter >= 1){
                        alert(`You've won ${winCounter} out of 5 games. You win!`);
                    } else if(winCounter < 1){
                        alert(`You've won ${winCounter} out of 5 games. You lost!`);
                    }
-                }
+                }}
     }
 }
 
