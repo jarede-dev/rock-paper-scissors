@@ -49,25 +49,23 @@ function game(){
                 if( i === 4 ){
                      alert("You've played 5 games");
                 }
-
+                if( i === 4 ){
+                    if (getWinOrLose.includes("You win")){
+                        winCounter = winCounter+ 1;
+                       continue;
+                   } else if(getWinOrLose.includes("You lose")){
+                       winCounter = winCounter - 1;
+                       continue;
+                   } else if(getWinOrLose.includes("tie")){
+                       continue;
+                   }
+                   if(winCounter >= 1){
+                       alert(`You've won ${winCounter} out of 5 games. You win!`);
+                   } else if(winCounter < 1){
+                       alert(`You've won ${winCounter} out of 5 games. You lost!`);
+                   }
+                }
     }
 }
 
 console.log(game());
-
-// if( i === 4 ){
-//     if (getWinOrLose.includes("You win") === true){
-//         winCounter = winCounter+ 1;
-//        continue;
-//    } else if(getWinOrLose.includes("You lose") === true){
-//        winCounter = winCounter - 1;
-//        continue;
-//    } else if(getWinOrLose.includes("tie") === true){
-//        continue;
-//    }
-//    if(winCounter >= 1){
-//        alert(`You've won ${winCounter} out of 5 games. You win!`);
-//    } else if(winCounter < 1){
-//        alert(`You've lost ${winCounter} out of 5 games. You lost!`);
-//    }
-// }
