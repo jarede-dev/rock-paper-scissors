@@ -38,7 +38,23 @@ function playRound(playerSelection, computerSelection){
 
 // game function returns the winner after five rounds
 function game(){
-
+ for( i = 0; i < 5; i++){
+    let getWinOrLose = playRound(getSelect, computerPlay());
+    let counter = 0;
+    if(getWinOrLose.includes("You win")){
+        return counter = i++;
+    } else if(getWinOrLose.includes("You lose")){
+        return counter = i--;
+    } else if(getWinOrLose.includes("tie")){
+        return counter += 0.5;
+    } else if( i === 4 ){
+        if( counter > 2.5 ){
+            alert( `You've won ${counter} out of 5 games, You Win!`);
+        } else{
+            alert(`You've only won ${counter} out of 5 games, You Lose!`);
+        }
+    }
+ }
 }
 
 console.log(game());
