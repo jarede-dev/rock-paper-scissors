@@ -38,35 +38,39 @@ function playRound(playerSelection, computerSelection){
 
 // game function returns the winner after five rounds
 function game(){
-    for(let i = 0; i < 5; i++){
 
-            let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
-            if(getSelect === null || getSelect === ""){
-                alert("You clicked Cancel!");
-            }
-            let getWinOrLose = alert(playRound(getSelect, computerPlay()));
-            let winCounter = 0;
-                if( i === 4 ){
-                     alert("You've played 5 games");
-                      return getResult;
-                }
-                const getResult = () => {if( i === 4 ){
-                    if (getWinOrLose.includes("You win")){
-                        winCounter = winCounter+ 1;
-
-                   } else if(getWinOrLose.includes("You lose")){
-                       winCounter = winCounter - 1;
-
-                   } else if(getWinOrLose.includes("tie")){
-
-                   }
-                   if(winCounter >= 1){
-                       alert(`You've won ${winCounter} out of 5 games. You win!`);
-                   } else if(winCounter < 1){
-                       alert(`You've won ${winCounter} out of 5 games. You lost!`);
-                   }
-                }}
-    }
 }
 
 console.log(game());
+
+// previous game function
+
+// for(let i = 0; i < 5; i++){
+
+//     let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
+//     if(getSelect === null || getSelect === ""){
+//         alert("You clicked Cancel!");
+//     }
+//     let getWinOrLose = alert(playRound(getSelect, computerPlay()));
+//     let winCounter = 0;
+//         if( i === 4 ){
+//              alert("You've played 5 games");
+//               return getResult;
+//         }
+//         const getResult = () => {if( i === 4 ){
+//             if (getWinOrLose.includes("You win")){
+//                 winCounter = winCounter+ 1;
+
+//            } else if(getWinOrLose.includes("You lose")){
+//                winCounter = winCounter - 1;
+
+//            } else if(getWinOrLose.includes("tie")){
+
+//            }
+//            if(winCounter >= 1){
+//                alert(`You've won ${winCounter} out of 5 games. You win!`);
+//            } else if(winCounter < 1){
+//                alert(`You've won ${winCounter} out of 5 games. You lost!`);
+//            }
+//         }}
+// }
