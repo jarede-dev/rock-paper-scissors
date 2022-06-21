@@ -39,8 +39,15 @@ function playRound(playerSelection, computerSelection){
 // game function returns the winner after five rounds
 function game(){
  for( i = 0; i < 5; i++){
+
+    let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
+    if(getSelect === null || getSelect === ""){
+        alert("You clicked Cancel!");
+    }
+
     let getWinOrLose = playRound(getSelect, computerPlay());
     let counter = 0;
+
     if(getWinOrLose.includes("You win")){
         return counter = i++;
     } else if(getWinOrLose.includes("You lose")){
