@@ -48,6 +48,10 @@ function game(){
     let getWinOrLose = alert(playRound(getSelect, computerPlay()));
     let counter = 0;
 
+    if( i === 4 ){
+        return alert("You've played 5 games already");
+    }
+
     if(getWinOrLose.includes("You win")){
         return counter = i++;
     } else if(getWinOrLose.includes("You lose")){
@@ -56,9 +60,9 @@ function game(){
         return counter += 0.5;
     } else if( i === 4 ){
         if( counter > 2.5 ){
-            alert( `You've won ${counter} out of 5 games, You Win!`);
+            return alert( `You've won ${counter} out of 5 games, You Win!`);
         } else{
-            alert(`You've only won ${counter} out of 5 games, You Lose!`);
+            return alert(`You've only won ${counter} out of 5 games, You Lose!`);
         }
     }
  }
