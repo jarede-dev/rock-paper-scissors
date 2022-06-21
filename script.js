@@ -45,7 +45,7 @@ function game(){
         alert("You clicked Cancel!");
     }
 
-    let getWinOrLose = playRound(getSelect, computerPlay());
+    let getWinOrLose = alert(playRound(getSelect, computerPlay()));
     let counter = 0;
 
     if(getWinOrLose.includes("You win")){
