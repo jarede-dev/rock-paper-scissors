@@ -38,7 +38,7 @@ function playRound(playerSelection, computerSelection){
 
 // game function returns the winner after five rounds
 function game(){
- for( i = 0; i < 5; i++){
+ for( let i = 0; i < 5; i++){
 
     let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
     if(getSelect === null || getSelect === ""){
