@@ -64,7 +64,7 @@ function computerPlay() {
         if (winCounter >= 3) {
           return alert(`You've won ${winCounter} out of 5 games. You win!`);
         } else if (winCounter === 2.5) {
-          return alert(`You've won 2.5 out of 5 games. It's a tie!`);
+          return alert(`You've won ${winCounter} out of 5 games. It's a tie!`);
         } else if (winCounter < 2.5) {
           return alert(`You've won ${winCounter} out of 5 games. You lost!`);
         }
