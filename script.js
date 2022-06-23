@@ -13,6 +13,7 @@ function computerPlay() {
   // playRound function will play a game of rock, paper, scissors and returns the result
   function playRound(playerSelection, computerSelection) {
     let getPlayerInsensitive = playerSelection.toLowerCase();
+
     var winCounter = 0;
     if (getPlayerInsensitive === "rock" && computerSelection === "Rock") {
       winCounter = winCounter;
@@ -50,8 +51,7 @@ function computerPlay() {
       } else if (winCounter === 2.5) {
         return alert(`You've won ${winCounter} out of 5 games. It's a tie!`);
       } else if (winCounter < 2.5) {
-        return alert(`
-        You've won ${winCounter} out of 5 games. You lost!`);
+        return alert(`You've won ${winCounter} out of 5 games. You lost!`);
       }
     }
     return alertWinner;
@@ -59,22 +59,22 @@ function computerPlay() {
 
   // game function returns the winner after five rounds
   function game() {
-    for (let i = 0; i < 5; i++) {
 
+    for (let i = 0; i < 5; i++) {
       let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
       if (getSelect === null || getSelect === "") {
         alert("You clicked Cancel!");
       }
       let getWinOrLose = alert(playRound(getSelect, computerPlay()));
 
-
       //outputs the winner of 5 games
 
       if (i === 4) {
         alert("You've played 5 games");
+
       }
     }
 
   }
 
-  console.log(game());
+  console.log(playRound(game(), computerPlay()));
