@@ -9,11 +9,13 @@ function computerPlay() {
     return "Scissors";
   }
 }
+
+// declaring winCounter outside of playRound function to make it global scoped
 let winCounter = 0;
+
 // playRound function will play a game of rock, paper, scissors and returns the result
 function playRound(playerSelection, computerSelection) {
   let getPlayerInsensitive = playerSelection.toLowerCase();
-
 
   if (getPlayerInsensitive === "rock" && computerSelection === "Rock") {
     winCounter = winCounter+=0.5;
@@ -46,9 +48,6 @@ function playRound(playerSelection, computerSelection) {
     return "Check your spelling!";
   }
 
-
-  //return alertWinner();
-
 }
 
 // game function returns the winner after five rounds
@@ -79,12 +78,10 @@ function game() {
        alert(`You've won ${winCounter} out of 5 games. You lost!`);
        return `You've won ${winCounter} out of 5 games. You lost!`;
     }
-      //return alertWinner;
+
     }
   }
 
 }
 
-// const playerSelection = "rock";
-//const computerSelection = computerPlay();
 console.log(game());
