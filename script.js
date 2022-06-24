@@ -58,8 +58,8 @@ function game() {
     if (getSelect === null || getSelect === "") {
       alert("You clicked Cancel!");
     }
-    const result = (playRound(getSelect, computerPlay()))
-    alert(result);
+    const result = (playRound(getSelect, computerPlay()));
+    //alert(result)
     if (i < 5) {
       console.log(result);
     }
