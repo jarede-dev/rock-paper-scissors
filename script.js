@@ -70,11 +70,14 @@ function game() {
     if (i === 4) {
       alert("You've played 5 games");
       if (winCounter >= 3) {
-      return alert(`You've won ${winCounter} out of 5 games. You win!`);
+       alert(`You've won ${winCounter} out of 5 games. You win!`);
+       return `You've won ${winCounter} out of 5 games. You win!`;
     } else if (winCounter === 2.5) {
-      return alert(`You've won 2.5 out of 5 games. It's a tie!`);
+       alert(`You've won 2.5 out of 5 games. It's a tie!`);
+       return `You've won 2.5 out of 5 games. It's a tie!`;
     } else if (winCounter < 2.5) {
-      return alert(`You've won ${winCounter} out of 5 games. You lost!`);
+       alert(`You've won ${winCounter} out of 5 games. You lost!`);
+       return `You've won ${winCounter} out of 5 games. You lost!`;
     }
       //return alertWinner;
     }
