@@ -59,7 +59,7 @@ function game() {
       alert("You clicked Cancel!");
     }
     const result = (playRound(getSelect, computerPlay()));
-    //alert(result)
+    alert(result)
     if (i < 5) {
       console.log(result);
     }
