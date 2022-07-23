@@ -1,2 +1,2 @@
 # rock-paper-scissors
-A rock paper scissors project using Javascript. I'll be working everything in the console only for now.
+A rock paper scissors project using Javascript. Branch where I'll add HTML and functionality.
