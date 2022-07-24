@@ -86,15 +86,9 @@ function game() {
 
 console.log(game());
 
-// create buttons
+// add event listeners
+let rock = document.getElementById("rock");
+let paper = document.getElementById("paper");
+let scissors = document.getElementById("scissors");
 
-let result = document.createElement("div");
-
-let rock = document.createElement("button");
-let paper = document.createElement("button");
-let scissors = document.createElement("button");
-
-result.setAttribute("id", "result");
-rock.setAttribute("id", "rock");
-paper.setAttribute("id", "paper");
-scissors.setAttribute("id", "scissors");
+let selects = document.getElementsByClassName("select");
