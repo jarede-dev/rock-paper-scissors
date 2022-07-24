@@ -53,13 +53,13 @@ function playRound(playerSelection, computerSelection) {
 // game function returns the winner after five rounds
 function game() {
   for (let i = 0; i < 5; i++) {
-
-    let getSelect = prompt("Choose Rock, Paper, or Scissors", "");
+  let playerSelection = "rock";
+    let getSelect = playerSelection;
     if (getSelect === null || getSelect === "") {
-      alert("You clicked Cancel!");
+      console.log("You clicked Cancel!");
     }
     const result = (playRound(getSelect, computerPlay()));
-    alert(result)
+    //alert(result)
     if (i < 5) {
       console.log(result);
     }
@@ -67,15 +67,15 @@ function game() {
     //outputs the winner of 5 games
 
     if (i === 4) {
-      alert("You've played 5 games");
+      console.log("You've played 5 games");
       if (winCounter >= 3) {
-        alert(`You've won ${winCounter} out of 5 games. You win!`);
+        console.log(`You've won ${winCounter} out of 5 games. You win!`);
         return `You've won ${winCounter} out of 5 games. You win!`;
       } else if (winCounter === 2.5) {
-        alert(`You've won 2.5 out of 5 games. It's a tie!`);
+        console.log(`You've won 2.5 out of 5 games. It's a tie!`);
         return `You've won 2.5 out of 5 games. It's a tie!`;
       } else if (winCounter < 2.5) {
-        alert(`You've won ${winCounter} out of 5 games. You lost!`);
+        console.log(`You've won ${winCounter} out of 5 games. You lost!`);
         return `You've won ${winCounter} out of 5 games. You lost!`;
       }
 
@@ -85,3 +85,16 @@ function game() {
 }
 
 console.log(game());
+
+// create buttons
+
+let result = document.createElement("div");
+
+let rock = document.createElement("button");
+let paper = document.createElement("button");
+let scissors = document.createElement("button");
+
+result.setAttribute("id", "result");
+rock.setAttribute("id", "rock");
+paper.setAttribute("id", "paper");
+scissors.setAttribute("id", "scissors");
