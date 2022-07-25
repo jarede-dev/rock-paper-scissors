@@ -1,3 +1,6 @@
+let player = 0;
+let computer = 0;
+
 // computerPlay function  will randomly returns rock, paper, or scissors
 function computerPlay() {
   let getRandom = Math.floor(Math.random() * 10);
@@ -9,86 +12,72 @@ function computerPlay() {
     return "Scissors";
   }
 }
+let text = document.querySelector("#text");
+text.textContent = "";
 
-// declaring winCounter outside of playRound function to make it global scoped
-let winCounter = 0;
-
-// playRound function will play a game of rock, paper, scissors and returns the result
 function playRound(playerSelection, computerSelection) {
+  //('running here', playerSelection, computerSelection)
+  playerSelection = playerSelection.toString();
   let getPlayerInsensitive = playerSelection.toLowerCase();
-
+  let getResult = document.getElementById("result");
   if (getPlayerInsensitive === "rock" && computerSelection === "Rock") {
-    winCounter += 0.5;
-    return "It's a tie, both are Rock";
+    player+=0;
+      text = `Player: ${player}
+      Computer: ${computer}
+      It's a tie, both are Rock`;
+    getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "rock" && computerSelection === "Paper") {
-    winCounter = winCounter;
-    return "You Lose! Paper beats Rock";
+    computer+=1;
+    text = `Player: ${player}   Computer: ${computer} 
+ You Lose! Paper beats Rock`; 
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "rock" && computerSelection === "Scissors") {
-    winCounter += 1;
-    return "You win! Rock beats Scissors";
+    player+=1;
+    text = `Player: ${player}   Computer: ${computer} 
+ You win! Rock beats Scissors`;
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "paper" && computerSelection === "Rock") {
-    winCounter += 1;
-    return "You win! Paper beats Rock";
+    player+= 1;
+    text = `Player: ${player}   Computer: ${computer} 
+ You win! Paper beats Rock`;
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "paper" && computerSelection === "Paper") {
-    winCounter += 0.5;
-    return "It's a tie! Both are Paper";
+    player+=0;
+    text = `Player: ${player}   Computer: ${computer} 
+ It's a tie! Both are Paper`;
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "paper" && computerSelection === "Scissors") {
-    winCounter = winCounter;
-    return "You lose! Scissors beats Paper";
+    computer+=1;
+    text = `Player: ${player}   Computer: ${computer} 
+ You lose! Scissors beats Paper`;
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "scissors" && computerSelection === "Rock") {
-    winCounter = winCounter;
-    return "You lose! Rock beats Scissors";
+    computer+=1;
+    text = `Player: ${player}   Computer: ${computer} 
+ You lose! Rock beats Scissors`;
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "scissors" && computerSelection === "Scissors") {
-    winCounter += 0.5;
-    return "It's a tie! Both are Scissors";
+    player+=0;
+    text = `Player: ${player}   Computer: ${computer} 
+ It's a tie! Both are Scissors`;
+ getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "scissors" && computerSelection === "Paper") {
-    winCounter += 1;
-    return "You win! Scissors beat Paper";
+    player+=1;
+    text = `Player: ${player}   Computer: ${computer} 
+ You win! Scissors beat Paper`;
+ getResult.innerHTML = text;
   } else {
     return "Check your spelling!";
   }
 
 }
 
-// game function returns the winner after five rounds
-function game() {
-  for (let i = 0; i < 5; i++) {
-  let playerSelection = "rock";
-    let getSelect = playerSelection;
-    if (getSelect === null || getSelect === "") {
-      console.log("You clicked Cancel!");
-    }
-    const result = (playRound(getSelect, computerPlay()));
-    //alert(result)
-    if (i < 5) {
-      console.log(result);
-    }
+//event listeners
+const result = document.querySelector("#result");
+const rockBtn = document.querySelector("#rock");
+const paperBtn = document.querySelector("#paper");
+const scissorsBtn = document.querySelector("#scissors");
 
-    //outputs the winner of 5 games
-
-    if (i === 4) {
-      console.log("You've played 5 games");
-      if (winCounter >= 3) {
-        console.log(`You've won ${winCounter} out of 5 games. You win!`);
-        return `You've won ${winCounter} out of 5 games. You win!`;
-      } else if (winCounter === 2.5) {
-        console.log(`You've won 2.5 out of 5 games. It's a tie!`);
-        return `You've won 2.5 out of 5 games. It's a tie!`;
-      } else if (winCounter < 2.5) {
-        console.log(`You've won ${winCounter} out of 5 games. You lost!`);
-        return `You've won ${winCounter} out of 5 games. You lost!`;
-      }
-
-    }
-  }
-
-}
-
-console.log(game());
-
-// add event listeners
-let rock = document.getElementById("rock");
-let paper = document.getElementById("paper");
-let scissors = document.getElementById("scissors");
-
-let selects = document.getElementsByClassName("select");
+let rockClick = rockBtn.addEventListener('click', () => playRound("rock", computerPlay()));
+let paperClick = paperBtn.addEventListener('click', () => playRound("paper", computerPlay()));
+let scissorsClick = scissorsBtn.addEventListener('click', () => playRound("scissors", computerPlay()));
