@@ -6,7 +6,16 @@
     margin-top: 40px;
 }
 
+#result{
+    height: 50px;
+    width: 200px;
+    background-color: coral;
+    padding: 20px;
+    border: 2px black solid;
+}
+
 .select{
     margin: 6px;
     padding: 7px;
+    background-color: antiquewhite;
 }
