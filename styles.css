@@ -27,6 +27,12 @@ body{
     margin: 6px;
     padding: 7px;
     background-color: antiquewhite;
+    transition: all 0.3s;
+}
+
+.select:focus{
+    border: 2.5px red solid;
+    background-color: coral;
 }
 
 #rock{
