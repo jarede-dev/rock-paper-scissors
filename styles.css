@@ -1,3 +1,11 @@
+*{
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=112076), auto !important;
+}
+
+body{
+    background-color:bisque;
+}
+
 #container{
     display: flex;
     flex-direction: column;
@@ -12,10 +20,23 @@
     background-color: coral;
     padding: 20px;
     border: 2px black solid;
+    white-space: pre;
 }
 
 .select{
     margin: 6px;
     padding: 7px;
     background-color: antiquewhite;
+}
+
+#rock{
+    cursor: url(https://cur.cursors-4u.net/people/peo-3/peo202.cur), auto !important;
+}
+
+#paper{
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=93812), auto !important;
+}
+
+#scissors{
+    cursor: url(http://www.rw-designer.com/cursor-extern.php?id=114969), auto !important;
 }
