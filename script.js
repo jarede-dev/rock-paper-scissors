@@ -22,49 +22,48 @@ function playRound(playerSelection, computerSelection) {
   let getResult = document.getElementById("result");
   if (getPlayerInsensitive === "rock" && computerSelection === "Rock") {
     player+=0;
-      text = `Player: ${player}
-      Computer: ${computer}
-      It's a tie, both are Rock`;
+    text = `Player: ${player}   Computer: ${computer}
+It's a tie, both are Rock`;
     getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "rock" && computerSelection === "Paper") {
     computer+=1;
     text = `Player: ${player}   Computer: ${computer} 
- You Lose! Paper beats Rock`; 
+You Lose! Paper beats Rock`; 
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "rock" && computerSelection === "Scissors") {
     player+=1;
     text = `Player: ${player}   Computer: ${computer} 
- You win! Rock beats Scissors`;
+You win! Rock beats Scissors`;
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "paper" && computerSelection === "Rock") {
     player+= 1;
     text = `Player: ${player}   Computer: ${computer} 
- You win! Paper beats Rock`;
+You win! Paper beats Rock`;
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "paper" && computerSelection === "Paper") {
     player+=0;
     text = `Player: ${player}   Computer: ${computer} 
- It's a tie! Both are Paper`;
+It's a tie! Both are Paper`;
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "paper" && computerSelection === "Scissors") {
     computer+=1;
     text = `Player: ${player}   Computer: ${computer} 
- You lose! Scissors beats Paper`;
+You lose! Scissors beats Paper`;
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "scissors" && computerSelection === "Rock") {
     computer+=1;
     text = `Player: ${player}   Computer: ${computer} 
- You lose! Rock beats Scissors`;
+You lose! Rock beats Scissors`;
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "scissors" && computerSelection === "Scissors") {
     player+=0;
     text = `Player: ${player}   Computer: ${computer} 
- It's a tie! Both are Scissors`;
+It's a tie! Both are Scissors`;
  getResult.innerHTML = text;
   } else if (getPlayerInsensitive === "scissors" && computerSelection === "Paper") {
     player+=1;
     text = `Player: ${player}   Computer: ${computer} 
- You win! Scissors beat Paper`;
+You win! Scissors beat Paper`;
  getResult.innerHTML = text;
   } else {
     return "Check your spelling!";
