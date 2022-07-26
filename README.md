@@ -13,6 +13,6 @@ In Desktop:
 
 In Mobile:
 
-<img src="img/rpsMobile.png"
+<img src="img\rpsMobile.png"
      alt="Image of rps in Mobile"
      style="float: left; margin-right: 10px;" />
