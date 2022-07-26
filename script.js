@@ -70,12 +70,18 @@ You win! Scissors beat Paper`;
   }
 
   if(player === 5){
+    document.querySelectorAll('button.select').forEach(elem => {
+      elem.disabled = true;
+  });
    text = `Player: ${player}   Computer: ${computer} 
 You've won ${player} games and your 
 opponent only won ${computer} games. 
 YOU WIN!`;
    getResult.innerHTML = text;
   } else if(computer === 5){
+    document.querySelectorAll('button.select').forEach(elem => {
+      elem.disabled = true;
+  });
     text = `Player: ${player}   Computer: ${computer} 
 You've only won ${player} games and 
 your opponent won ${computer} games. 
