@@ -10,17 +10,24 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
+}
+
+#instr2{
+    margin-top: 0px;
 }
 
 #result{
-    height: 50px;
-    width: 200px;
+    height: 70px;
+    width: 250px;
     background-color: coral;
-    padding: 20px;
+    padding: 30px;
     border: 2px black solid;
     white-space: pre;
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-family: monospace;
+    font-size: large;
 }
 
 .select{
@@ -28,6 +35,8 @@ body{
     padding: 7px;
     background-color: antiquewhite;
     transition: all 0.3s;
+    font-family: monospace;
+    font-size: large;
 }
 
 .select:focus{
