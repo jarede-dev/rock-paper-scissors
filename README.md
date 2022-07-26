@@ -2,7 +2,11 @@
 A rock paper scissors project using Javascript. 
 
 In Desktop:
-![rpsDesktop]](rpsDesktop.png)
+<img src="img\rpsDesktop.png"
+     alt="Image of rps in Desktop"
+     style="float: left; margin-right: 10px;" />
 
 In Mobile:
-![rpsMobile]](rpsMobile.png)
+<img src="img/rpsMobile.png"
+     alt="Image of rps in Mobile"
+     style="float: left; margin-right: 10px;" />
